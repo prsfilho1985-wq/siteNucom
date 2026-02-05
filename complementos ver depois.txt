@@ -1,0 +1,39 @@
+		</ul>
+		
+		<h3>Roteiro Domicílio Arrecadação</h3>
+		<ul>
+		 	<li>D – 72172000000 Disponibilidade por FR – Controle p/ domicílio bancário e fonte</li>
+			<li>C – 82172010000 Disponibilidade por Fonte a Utilizar – Controle p/ domicílio bancário e fonte</li>
+			<li>D – 72174000000 Disponibilidade por FR – Controle p/ Detalhamento da Fonte</li>
+			<li>C – 82174010000 Disponibilidade por Fonte a Utilizar – Controle p/ Detalhamento da Fonte</li>
+			<li>D – 11112400101 Limite de Saque</li>
+			<li>C – 45122010600 Correspondência de Débitos – Limite de Saque</li>
+			<li>D – 35122010600 Correspondência de Créditos – Limite de Saque -  <strong>Tesouro</strong></li>
+			<li>C – 21892400100 Recursos a Liberar – Limite de saque (F) -  <strong>Tesouro</strong></li>
+			<li>D – 11111190101 Arrecadação Banco do Brasil</li>
+			<li>C – 4xxxxxxxxxx Tipo da Receita</li>
+			<li>D – 62110000000 Receita a Realizar</li>
+			<li>C – 62121000000 Receita Realizada</li>
+			<li>D – 72111000000 Controle da Disponibilidade de Recursos</li>
+			<li>C – 82111000000 Disponibilidade por Destinação de Recursos</li>
+			<li>D – 72171000000 Disponibilidade Por Fonte de Recursos – Controle p/ UG/ Gestão</li>
+			<li>C – 82171030000 Disponibilidade Por Destinação de Recursos a Utilizar</li>
+		
+		</ul>	
+		<h3>Roteiro Domicílio Próprio</h3>
+		<ul>
+		 	<li>D – 72172000000 Disponibilidade por FR – Controle p/ domicílio bancário e fonte</li>
+			<li>C – 82172010000 Disponibilidade por Fonte a Utilizar – Controle p/ domicílio bancário e fonte</li>
+			<li>D – 72174000000 Disponibilidade por FR – Controle p/ Detalhamento da Fonte</li>
+			<li>C – 82174010000 Disponibilidade por Fonte a Utilizar – Controle p/ Detalhamento da Fonte</li>
+			<li>D – 11111190101 Arrecadação Banco do Brasil</li>
+			<li>C – 4xxxxxxxxxx Tipo da Receita</li>
+			<li>D – 62110000000 Receita a Realizar</li>
+			<li>C – 62121000000 Receita Realizada</li>
+			<li>D – 72111000000 Controle da Disponibilidade de Recursos</li>
+			<li>C – 82111000000 Disponibilidade por Destinação de Recursos</li>
+			<li>D – 72171000000 Disponibilidade Por Fonte de Recursos – Controle p/ UG/ Gestão</li>
+			<li>C – 82171030000 Disponibilidade Por Destinação de Recursos a Utilizar</li>
+		
+		</ul>	
+		<hr>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nota Empenho</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">	
+	
+
+	</head>
+	<body class="fundo">
+		<div id="topo">
+			<img src="imagens/nucom.png" width = 100>
+			<h1>Núcleo de Consultoria e Monitoramento</h1>
+		</div>
+
+
+		<h2>Cotas</h2> 
+		<p>Em contabilidade e execução orçamentária pública, as cotas representam a autorização financeira que o órgão central (Tesouro, por exemplo) concede às Unidades Gestoras (UGs) para que elas possam executar o orçamento já aprovado.</p>
+		<p>👉 Em outras palavras:<p>
+			<ul>
+				<tr>A dotação orçamentária autoriza o gasto (no papel, pela LOA).</tr>
+				<tr>A cota autoriza o uso do dinheiro (na prática, pelo fluxo financeiro).</tr>
+			</ul>
+
+			<h3>💰 Diferença prática:</h3>
+
+			<table border="1">
+				<tr>
+					<th>Etapa</th>	
+					<th>Conceito</th>	
+					<th>O que Permite</th>	
+				</tr>
+				<tr>
+					<th>Dotação orçamentária</th>	
+					<td>Crédito aprovado na LOA (Lei Orçamentária Anual)</td>	
+					<td>Liberação do limite de desembolso mensal</td>	
+				</tr>
+				<tr>
+					<th>Cota Financeira</th>	
+					<td>Liberação do limite de desembolso mensal</td>	
+					<td>Liquidar e pagar despesa</td>	
+				</tr>
+			</table>
+
+			<h3>💰 Programação Financeira:</h3>
+	A Programação Financeira compreende a distribuição do orçamento anual em cotas mensais, tendo como objetivo ajustar o ritmo de execução do orçamento ao fluxo provável de recursos financeiros, limitando a emissão de pré-empenhos e empenhos de modo a assegurar a disponibilidade de recursos para a execução dos programas anuais.
+
+			<h3>🧩 Em termos contábeis:</h3>
+			No Sigef temos as Cotas Orçamentárias - 7.2.2.2 e financeiras 7.2.2:
+
+			<h4>Momento da Geração da Dotação Inicial (Seplan)</h4>
+
+			Neste momento são geradas as cotas orçamentárias a programar, a cota de despesa (orçamentária) é dada somente no momento da definição da programação financeira realizada pelo Tesouro.
+
+			<h4><strong>Funcionalidade:</strong>Gerar Dotação Inicial</h4>
+
+			<table border="1" width="700">
+				<tr><th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th></tr>
+				<tr><td>D </td><td>7.2.2.2.1.01.00</td><td>Cota de Despesa Fixada</td><td>UG</td></tr>
+				<tr><td>C </td><td>8.2.2.2.1.02.00</td><td>Cota de Despesa Orçamentária a Programar</td><td>UG</td></tr>
+			</table>
+
+			Em seguida o Tesouro autoriza as Cotas Financeiras, distribui as contas mensalmente para todas as UGs. Essas contas mostram a evolução do estágio financeiro de cada despesa em relação às cotas autorizadas.
+
+
+			<h4>Tesouro Autorizando as Cotas</h4>
+
+			<h4>Funcionalidade: Definir Programação Financeira Geral</h4>
+
+			<table border="1" width="700">
+				<tr><th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th></tr>
+				<tr><td>D</td><td>7.2.2.1.1.01.00 </td><td>Cota de Despesa Concedida</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.2.1.1.01.00</td><td>Cota de Despesa Autorizada</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.2.2.1.02.00</td><td>Cota de Despesa Orçamentária a Programar</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.2.2.1.04.00</td><td>Cota de Despesa a Empenhar</td><td>UG</td></tr>
+				<tr><td>D</td><td>7.2.2.2.1.02.00</td><td>Cota de Despesa Autorizada</td><td>UG</td></tr>            
+				<tr><td>C</td><td>8.2.2.2.1.09.00</td><td>Cota de Despesa Pré Empenho a Utilizar</td><td>UG</td></tr>
+			</table>	
+			<br>		
+
+			Depois que é definido a programação Financeira as UGs podem executar suas despesas.	
+			No Empenho:
+			<br>
+			<br>
+
+			<table border="1" width="700">
+					<tr><th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th></tr>			
+					<tr><td>D</td><td>8.2.1.1.1.00.00 </td><td>Disponibilidade por Destinação de Recursos</td> <td>UG</td></tr>
+					<tr><td>C</td><td>8.2.1.1.2.00.00 </td> <td>Disponibilidade por Destinação de Recursos Comprometidas por Empenho</td><td>UG</td></tr>
+					<tr><td>D</td><td>8.2.2.2.1.04.00 </td> <td>Cota de Despesa a Empenhar </td><td>UG</td></tr>
+					<tr><td>C</td><td>8.2.2.2.1.07.00 </td> <td>Cota de Despesa Empenhada </td><td>UG</td></tr>
+					<tr><td>D</td><td>8.2.2.2.1.09.00 </td><td>Cota de Despesa Pré Empenho a Utilizar</td><td>UG</td></tr>            
+					<tr><td>C</td><td>8.2.2.2.1.11.00 </td><td>Cota de Despesa Pré Empenho Utilizada </td><td>UG</td></tr>			
+
+		</table>
+
+			<p>Observem conforme as contas contábeis acima, que o Empenho reduz a cota orçamentária disponibilizada no momento da geração da dotação inicial, ou acrescimos e disponibilizada no momento da geração da programação financeira pela CAF. Até aqui não estamos falando em redução de cotas financeiras, pois o empenho reduz somente a cota orçamentária. Até porque a cota financeira ainda não foi disponibilizada que somente é solicitada na liquidação da despesa.</p>
+			<p>É na liquidação que ocorre a solicitação do repasse financeiro, conforme contas contábeis abaixo.</p>
+
+
+
+			Na Liquidação :
+			<table border="1" width="700">
+			<th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th>
+			<tr><td>D</td><td>7.2.2.2.2.01.00</td><td>Recebimento de Repasse Financeiro Tesouro - sem DC</td> <td>UG</td></tr>
+			<tr><td>C</td><td>8.2.2.2.2.01.01</td><td>Cota de Repasse a Solicitar</td><td>UG</td></tr>
+			</table> <br>
+
+
+			Na Liquidação (Hospital) :
+			<table border="1" width="700">
+			<th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th>
+			<tr><td>D</td><td>7.2.2.2.2.07.00</td><td>Recebimento de Sub Repasse Nota de Crédito - Recursos do Tesouro</td> <td>Hosp.</td></tr>
+			<tr><td>C</td><td>8.2.2.2.2.07.01</td><td>Cota de Sub Repasse NC a Receber</td><td>Hosp.</td></tr>
+			<tr><td>D</td><td>7.2.2.1.2.07.00</td><td>Concessão de Sub Repasse Nota de Crédito - Recursos do Tesouro</td> <td>Sesap</td></tr>
+			<tr><td>C</td><td>8.2.2.1.2.07.01</td><td>Cota de Sub Repasse NC a Transferir</td><td>Sesap</td></tr>
+			<tr><td>D</td><td>7.2.2.2.2.06.00</td><td>Recebimento de Repasse Financeiro Nota Crédito - Tesouro</td><td>Sesap</td></tr>
+			<tr><td>C</td><td>8.2.2.2.2.06.01</td><td>Cota de Repasse NC a Solicitar</td><td>Sesap</td></tr>
+			</table> <br>
+
+
+			Solicitar Repasse Financeiro
+
+			<br><br>
+			<table border="1" width="700">
+				<th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th>
+				<tr><td>D</td><td>8.2.2.2.2.01.01</td><td>Cota de Repasse a Solicitar</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.01.02</td><td>Cota de Repasse Solicitada</td><td>UG</td></tr>
+				<tr><td>D</td><td>7.2.2.1.2.01.00</td><td>Concessão de Repasse Financeiro Tesouro - sem DC</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.2.1.2.01.02</td><td>Cota de Repasse a Autorizar</td><td>CAF</td></tr>
+			</table> <br>
+
+			Solicitar Repasse (Hospital)
+
+			<br><br>
+			<table border="1" width="700">
+				<th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th>
+				<tr><td>D</td><td>8.2.1.7.1.04.00</td><td>Disponibilidade de Fonte de Recursos a Tranferir por Descentralização</td><td>Sesap</td></tr>
+				<tr><td>C</td><td>8.2.1.7.1.06.00</td><td>Disponibilidade por Fonte de Recusos Bloqueada</td><td>Sesap</td></tr>
+				<tr><td>D</td><td>8.2.2.1.2.07.01</td><td>Cota de Sub Repasse NC a Transferir </td><td>Sesap</td></tr>
+				<tr><td>C</td><td>8.2.2.1.2.07.02</td><td>Cota de Sub Repasse NC em Transferência </td><td>Sesap</td></tr>
+				<tr><td>D</td><td>8.2.2.2.2.06.05</td><td>Cota de Repasse NC Recebida a Transferir</td><td>Sesap</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.06.06</td><td>Cota de Repasse NC em Transferência</td><td>Sesap</td></tr>
+				<tr><td>D</td><td>8.2.2.2.2.07.01</td><td>Cota de Sub Repasse NC a Receber</td><td>Hosp.</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.07.02</td><td>Cota de Sub Repasse NC em Recebimento</td><td>Hosp.</td></tr>
+			</table> <br>
+
+			Autorizar Repasse Financeiro<br><br>
+			<table border="1" width="700">
+				<tr><th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th></tr>
+				<tr><td>D</td><td>8.2.2.1.2.01.02</td><td>Cota de Repasse a Autorizar</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.2.1.2.01.03</td><td>Cota de Repasse Autorizada a Liberar</td><td>CAF</td></tr>		
+				<tr><td>D</td><td>8.2.2.2.2.01.02</td><td>Cota de Repasse Solicitada</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.01.03</td><td>Cota de Repasse Autorizada a Receber</td><td>UG</td></tr>
+				<tr><td>D</td><td>8.2.1.7.1.02.00</td><td>Disponibilidade por Fonte de Recursos Tesouro do Estado</td><td>CAF</tr>
+				<tr><td>C</td><td>8.2.1.7.1.06.00</td><td>Disponibilidade por Fonte de Recursos Bloqueada</td><td>CAF</td></tr>
+			</table> <br><br>
+
+
+	 		  Na Preparação de Pagamento(Hospital)
+
+			<br><br>
+			<table border="1" width="700">
+				<th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th>
+				<tr><td>C</td><td>8.2.2.2.2.07.04</td><td>Cota de Sub Repasse NC Recebida a Utilizar</td><td>Hosp.</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.07.05</td><td>Cota de Sub Repasse NC Utilizada</td><td>Hosp.</td></tr>
+				<tr><td>C</td><td>8.2.1.7.1.03.00</td><td>Disponibilidade por Fonte de Recursos a Utilizar</td><td>Hosp.</td></tr>
+				<tr><td>C</td><td>8.2.1.7.1.06.00</td><td>Disponibilidade por Fonte de Recurso Bloqueada</td><td>Hosp.</td></tr>
+			</table> <br>
+
+		
+		
+		Ordem Bancária <br><br>
+			<table border="1"	width="700">
+				<tr><th>D/C</th><th>Conta Contábil</th><th>Descrição</th><th>UG/CAF</th></tr>
+				<tr><td>D</td><td>8.2.1.7.1.06.00.00</td><td>Disponibilidade por Fonte de Recursos Bloqueada</td><td>CAF</td></tr>
+				<tr><td>C</td><td>7.2.1.7.1.00.00.00</td><td>Disponibilidade por Fonte de Recursos - Controle por UG/Gestão</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.1.7.2.02.00.00</td><td>Disponibilidade por Fonte - OB Emitida - Controle por Domicílio Bancário e Fonte</td><td>CAF</td></tr>
+				<tr><td>C</td><td>7.2.1.7.2.00.00.00</td><td>Disponibilidade por Fonte de Recursos Controle por Domicílio Bancário e Fonte</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.1.7.4.02.00.00</td><td>Disponibilidade por Fonte - OB Emitida - Controle por Detalhamento da Fonte</td><td>CAF</td></tr>
+				<tr><td>C</td><td>7.2.1.7.4.00.00.00</td><td> Disponibilidade por Fonte de Recursos Controle por Detalhamento da Fonte</td><td>CAF</td></tr>
+				<tr><td>D</td><td>7.2.1.7.2.00.00.00</td><td>Disponibilidade por Fonte de Recursos Controle por Domicílio Bancário e Fonte</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.1.7.2.01.00.00</td><td> Disponibilidade por Fonte a Utilizar - Controle por Domicílio Bancário e Fonte</td><td> UG</td></tr>
+				<tr><td>D</td><td>7.2.1.7.4.00.00.00</td><td> Disponibilidade por Fonte - OB Emitida - Controle por Detalhamento da Fonte</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.1.7.4.01.00.00</td><td>Disponibilidade por Fonte a Utilizar -Controle por Detalhamento da Fonte</td><td> UG</td></tr>
+		  		<tr><td>D</td><td>8.2.1.7.2.01.00.00</td><td>Disponibilidade por Fonte a Utilizar - Controle por Domicílio Bancário e Fonte</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.1.7.2.02.00.00</td><td> Disponibilidade por Fonte - OB Emitida - Controle por Domicílio Bancário e Fonte</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.1.7.4.01.00.00</td><td>Disponibilidade por Fonte a Utilizar -Controle por Detalhamento da Fonte</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.1.7.4.02.00.00</td><td> Disponibilidade por Fonte - OB Emitida - Controle por Detalhamento da Fonte</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.2.1.2.01.03.00</td><td>Cota de Repasse Autorizada a Liberar</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.2.1.2.01.04.00</td><td>Cota de Repasse Transferida</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.2.1.2.01.99.00</td><td>(-) Controle da Execução de Concessão de Repasse Financeiro Tesouro</td><td>CAF</td></tr>
+				<tr><td>C</td><td>8.2.2.1.2.01.05.00</td><td>Cota de Repasse Transferida Líquida</td><td>CAF</td></tr>
+				<tr><td>D</td><td>8.2.1.1.1.00.00.00</td><td>Disponibilidade por Destinação de Recursos</td><td>CAF</td></tr>
+				<tr><td>C</td><td>7.2.1.1.1.00.00.00</td><td>Controle da Disponibilidade de Recursos</td><td> CAF</td></tr>
+				<tr><td>D</td><td>8.2.2.2.2.01.03.00</td><td>Cota de Repasse Autorizada a Receber </td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.01.05.00</td><td>Cota de Repasse a Utilizar</td><td>UG</td></tr>
+				<tr><td>D</td><td>8.2.2.2.2.01.99.00</td><td>(-) Controle da Execução do Recebimento de Repasse Financeiro Tesouro</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.2.2.2.01.04.00</td><td>Cota de Repasse Recebida</td><td>UG</td></tr>
+				<tr><td>D</td><td>7.2.1.1.1.00.00.00</td><td>Controle da Disponibilidade de Recursos</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.1.1.1.00.00.00</td><td>Disponibilidade por Destinação de Recursos</td><td>UG</td></tr>
+				<tr><td>D</td><td>7.2.1.7.1.00.00.00</td><td>Disponibilidade por Fonte de Recursos - Controle por UG/Gestão</td><td>UG</td></tr>
+				<tr><td>C</td><td>8.2.1.7.1.03.00.00</td><td>Disponibilidade de Recursos a Utilizar</td><td>UG</td></tr>
+			</table>
+		<hr>
+		<a href="index.html"> Página Inicial </a>
+	
+			
+		</ul>
+	</body>
+
+</html>

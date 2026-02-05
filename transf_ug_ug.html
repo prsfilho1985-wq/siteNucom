@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Tranferencia UG UG</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body class="fundo">
+
+		<div id="topo">
+			<img src="imagens/nucom.png" width = 100>
+			<h1>Núcleo de Consultoria e Monitoramento</h1>
+		</div>
+
+	<h1>Transferência UG UG/ UG CAF</h1>
+De acordo com a “Orientação – Transferência entre contas UG” da Contadoria Geral do Estado (junho/2025), o procedimento de transferência entre Unidades Gestoras (UG-UG) deve seguir dois passos principais:
+	<ol>
+		<li> Passo - Prepagação de Pagamento</li>
+			<ul>
+				<li><strong>Data de referência:</strong>conforme o extrato bancário;</li>
+				<li><strong>Favorecido:</strong> Unidade Gestora que vai receber o recurso;</li>
+				<li><strong>Tipo de serviço:</strong> Conta Corrente;</li>
+				<li><strong>Domicílio bancário destino:</strong> conta que receberá o recurso;</li>
+				<li><strong>Tipo de serviço:</strong> Conta Corrente;</li>
+				<li><strong>Domicílio bancário destino:</strong> conta que receberá o recurso;</li>
+				<li><strong>Tipo de Ordem Bancária:</strong></li>
+					<ul>
+						<li>REGULARIZAÇÃO (se for transferência de regularização);</li>
+						<li>EXTRA-ORÇAMENTÁRIO (se for transferência bancária real);</li>
+					</ul>
+				<li><strong>Observação:</strong>descrever claramente o motivo da transferência;</li>
+				<li>Evento Contábil</li>
+					<ul>
+						<li>700017 → Transferência entre contas de UG diferentes (exceto Conta Única);</li>
+						<li>700019 → Quando a transferência for para a Conta Única;</li>
+					</ul>
+
+			</ul>
+		<li> Passo - Ordem Bancária</li>
+		Usar a funcionalidade “Manter Ordem Bancária” com os seguintes dados:
+		<ul>
+			<li><strong>Data de referência:</strong>conforme o extrato;</li>
+			<li><strong>Domicílio origem:</strong>conta bancária da UG que está transferindo;</li>
+			<li><strong>Tipo:</strong></li>
+				<ul>
+					<li>REGULARIZAÇÃO (se for apenas contábil);</li>
+					<li>EXTRA-ORÇAMENTÁRIO (se houver saída bancária);</li>
+				</ul>
+			<li><strong>Pagamento:</strong>selecionar “Diversos”;</li>
+			<li><strong>Observação:</strong>repetir o motivo da transferência;</li>
+			<li><strong>Pagamentos:</strong>adicionar a PP criada no passo anterior (pode filtrar por fonte ou favorecido)</li>
+		</ul>
+
+		<h3>📘 Em resumo:</h3>
+		<ul>
+			<li>PP → UG favorecida (destino);</li>
+			<li>OB → feita pela UG origem (que transfere o recurso);</li>
+			<li>Eventos:</li>
+			<ul>
+				<li>700017 – entre contas de UGs;</li>
+				<li>700019 – para Conta Única.</li>
+			</ul>
+		</ul>
+	</ol>	
+
+			<h3>Exemplos:</h3>
+			<div>
+				<h4>Transferencia UG UG: Preparação de Pagamento</h4>
+				<img src="imagens/transf_ug_ug.png" width="600">
+			</div>
+			<div>
+				<h4>Transferencia UG UG: Ordem Bancária</h4>
+				<img src="imagens/transf_ug_ug_ob.png" width="600">
+			</div>
+			<div>
+				<h4>Transferencia UG CAF: Preparação de Pagamento</h4>
+				<img src="imagens/transf_ug_caf_pp.png" width="600">
+			</div>
+			<div>
+				<h4>Transferencia UG CAF: Ordem Bancária</h4>
+				<img src="imagens/transf_ug_caf_ob.png" width="600">
+			</div>
+
+		<hr>
+		<a href ="index.html">Pagina Incial</a>
+		
+
+</body>
+</html>

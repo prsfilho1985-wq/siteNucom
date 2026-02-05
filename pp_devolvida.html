@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Preparação de Pagamento Devolvida</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	</head>
+	<body class="fundo">
+		<div id="topo">
+			<img src="imagens/nucom.png" width = 100>
+		</div>
+		<h1 class="texto">Orçamento e Contabilidade Pública na Prática</h1>
+		<h2>PP Devolvida</h2> 
+		<p>No contexto dos manuais e notas técnicas do SIGEF e da Contabilidade Geral do Estado (CONTAG/RN), a sigla PP devolvida refere-se a uma Preparação de Pagamento devolvida, ou seja, um pagamento que foi rejeitado ou não 		processado pelo banco e retornou para a unidade gestora.</p>
+		<p>👉<strong> Conceito resumido:</strong>
+		A “PP devolvida” ocorre quando a ordem bancária (OB) ou o pagamento referente a uma despesa é rejeitado pelo sistema bancário — por exemplo, por dados incorretos do favorecido, conta encerrada, CNPJ divergente, erro de 		domicílio bancário ou ausência de saldo disponível — e o valor retorna ao órgão de origem.</p>
+		<p>Quando ocorre a devolução de pagamento, pode ocorrer três situações por parte das UGs.</p>
+		<ol>
+			<li>O empenho será pago novamente.</li>
+			<li>O empenho é do ano e não será mais pago</li>
+			<li>O empenho é do exercício anterior e não será mais pago</li>
+		</ol>
+
+		<div>
+		<h4>Situação 01: Empenho Pago Novamente </h4>
+		<p>A Unidade Gestora deverá utilizar a funcionalidade<strong>PP Devolução Banco </strong> e realizar o pagamento novamente.</p>
+		</div>
+		<hr>
+		
+		<div>
+		<h4>Situação 02: O Empenho é do ano e não será mais pago </h4>
+		<p>A Unidade Gestora deverá estornar a nota empenhho paga funcionalidade <strong>Estornar Nota Empenho Paga</strong></p>
+		</div>
+		<hr>
+		
+		<div>
+		<h4>Situação 03: O Empenho é de exercício anterior e não será mais pago</h4>
+		<p>Nesse caso, a pp devolvida deve ser baixada.</p>
+		</div>
+		<hr>
+
+
+		<p> Para baixar uma pp devolvida de ano anterior, utiliza-se a funcionalidade <strong>Nota Lançamento </strong>e os eventos dependerá de qual fonte de recursos foi utilizada e qual o domicílio bancário. </p>
+
+		<div>
+		<h4>Exemplo 1: Fonte 0500 e Domicílio Báncário 1006</h4>
+		Eventos: 
+		<ul>
+			<li>540422 – Dá limite de saque no Tesouro (UG 220500)</li>
+			<li>540431 – Baixa a GR devolvida (controle)</li>
+			<li>540430 – Converte a pp devolvida em receita do Tesouro</li>
+			<li>600912 – Volta da disponibilidade para o Tesouro</li>
+		</ul>
+
+			<img src="imagens/baixa_gr_pp_devolvida_f500_10006.png" width="600">
+		</div>
+
+		<hr>
+
+
+
+		<div>
+		<h4>Exemplo 2: Fonte 0501 e Domicílio Bancário 10006</h4>
+		Eventos: 
+		<ul>
+			<li>540426 - Conversão de Passivos na CTU em Receita UG</li>
+			<li>540431 – Baixa a GR devolvida (controle)</li>
+			<li>540430 – Converte a pp devolvida em receita do Tesouro</li>
+			<li>600912 – Volta da disponibilidade para o Tesouro</li>
+		</ul>
+			<img src="imagens/baixa_gr_pp_devolvida_f501_10006.png" width="600">
+		</div>
+
+		<hr>
+
+		<div>
+		<h4>Exemplo 3: Domicílio Bancário Próprio</h4>
+		Eventos: 
+		<ul>
+			<li>540438 – Conversão de PP Devolvida Domicílio UG em Receita</li>
+			<li>540431 – Baixa a GR devolvida (controle)</li>
+			<li>600757 - Retorno de Disponibilidade derivado de pagamento devolvido</li>
+		</ul>
+			<img src="imagens/baixa_gr_pp_devolvida_fpropria.png" width="600">
+		</div>
+
+		<hr>
+		
+		<div>
+		<h4>Caso Especial: Detran RENAINF</h4>
+		
+		Eventos: 
+		<ul>
+			<li>540680 – Converte a pp rejeitada em Depósitos RENAINF  a Repassar</li>
+			<li>540431 – Baixa a GR devolvida (controle)</li>
+		</ul>
+			<img src="imagens/baixa_gr_pp_devolvida_renainf.png" width="600">
+		</div>
+		
+
+		<hr>
+		<a href ="index.html">Pagina Incial</a>
+		
+	
+		
+	</body>
+
+</html>

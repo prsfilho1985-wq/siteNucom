@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nota Empenho</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">	
+	
+
+	</head>
+	<body class="fundo">
+		<div id="topo">
+			<img src="imagens/nucom.png" width = 100>
+			<h1>Orçamento e Contabilidade Pública na Prática</h1>
+		</div>
+
+		<h2>Empenho</h2> 
+		<p>O empenho é definido, segundo o Manual de Contabilidade Aplicada ao Setor Público (MCASP, 11ª edição), como o ato que cria para o Estado uma obrigação de pagamento pendente ou 		não de implemento de condição,comprometendo parte do crédito orçamentário disponível.De forma prática, o empenho representa a reserva do crédito orçamentário para fazer frente a 		uma despesa específica, com base em um compromisso assumido pelo ente público. Ele é uma das etapas da execução da despesa orçamentária — precedendo a liquidação e o pagamento — e 		tem como finalidade garantir que não sejam assumidas despesas sem a correspondente previsão orçamentária.</p>
+		
+		<hr>
+	
+		<h3>Nota Empenho</h3>
+		<p>A Nota de Empenho (NE) é o documento formal que materializa o ato do empenho da despesa pública. Em outras palavras, é o instrumento pelo qual a Administração registra, de forma documental, o compromisso assumido com o credor, reservando parte do crédito orçamentário para determinada despesa. </p>
+
+		<p>📘 Definição técnica (segundo a Lei nº 4.320/1964 e o MCASP):
+		Nota de Empenho é o documento que formaliza o empenho da despesa, indicando o nome do credor, a especificação e a importância da despesa, bem como o crédito orçamentário pelo qual deve correr. (Base: art. 61 da Lei nº 4.320/1964)</p>
+		
+
+		<h3>💡 Função da Nota de Empenho:</h3>
+		<ul>
+			<li>Comprovar o compromisso orçamentário assumido pela entidade pública;</li>
+			<li>Reservar a dotação orçamentária correspondente à despesa;</li>
+			<li>Autorizar a execução do gasto, dentro dos limites legais e orçamentários;</li>
+			<li>Servir de base para as etapas seguintes da despesa (liquidação e pagamento).</li>
+		</ul>
+		<h3>🧾 Conteúdo essencial da Nota de Empenho:</h3>
+		<ol>
+		<li>Identificação do credor (CNPJ/CPF);</li>
+		<li>Especificação da despesa (objeto, contrato, natureza da despesa);</li>
+		<li>Valor empenhado;</li>
+		<li>Dotação orçamentária (unidade orçamentária, programa, ação, fonte de recurso, natureza da despesa);</li>
+		<li>Data e número do empenho;</li>
+		<li>Assinatura ou identificação da autoridade competente.</li>
+		</ol>
+
+<h3>📊 Classificação segundo o tipo de despesa:</h3>
+		<ul>
+			<li><strong>Empenho Ordinário:</strong> valor e objeto certos e determinados (ex.: compra única de um bem).</li>	
+			<li><strong>Empenho Estimativo:</strong> valor incerto, mas objeto determinado (ex.: contas de água, luz, telefone).</li>	
+			<li><strong>Empenho Global:</strong> cobre despesas de execução continuada durante o exercício (ex.: contrato de prestação de serviços mensais).</li>	
+		</ul>
+		<hr>
+		<h1>SIGEF - Nota Empenho</h1>
+
+		A funcionalidade Nota Empenho é utilizada para o registro do empenho, reforço do empenho, anulação de empenho, pré-empenho e reforço do pre- emprenho. Nesta funcionalidade já é definido os cinco eventos para o registro do documentos citados.
+
+		<h3>Eventos definidos na funcionalidade</h3>
+
+		<ul>
+			<li>400010 - Emissão de Empenho da Despesa</li>
+			<li>400011 - Reforço de Empenho da Despesa</li>
+			<li>400012 - Anulação de Empenho da Despesa</li>
+			<li>400013 - Emissão de Empenho da Despesa Pré - Empenhada</li>
+			<li>400022 - Reforço de Empenho da Despesa Pré- Empenhada</li>
+		</ul>
+
+		<hr>
+
+		<h3>400010 - Emissão de Empenho da Despesa</h3>
+
+		<h4>Detalhe do Evento</h4>
+
+		<h4>Roteiro</h4>
+		<ul>
+			<li>D – 62211000000 Credito Disponível</li>
+			<li>C – 62213010000 Crédito Empenhado a Liquidar</li>
+			<li>D – 52292010100 Emissão de Empenhos</li>
+			<li>C – 62292010100 Empenhos a Liquidar</li>
+			<li>D – 5229202LLLL Define a Emissão do Empenho com base na modalidade de licitaçao</li>
+			<li>C – 6229202LLLL Define a Emissão do Empenho com base na modalidade de licitaçao</li>
+			<li>D – 52292060100 Valores Comprometidos</li>
+			<li>C – 62292060100 Valores a Liquidar</li>	
+			<li>D – 62231010000 Cota Orçamentária a Utilizar</li>
+			<li>C – 62231050000 Cota Orçamentária Utilizada</li>	
+			<li>D – 82111000000 Disponibilidade por destinação de Recursos</li>	
+			<li>D – 82112000000 Disponibilidade por destinação de Recursos Comprometidas por Empenho</li>		
+			<li>D – 79816000000 Controle da Certificações da Despesa por NE</li>	
+			<li>D – 89816010000 Nota de Empenho a Certificar</li>	
+		</ul>
+			<h4>Exemplo</h4>
+			<img src ="imagens/gr_800086.png" width = "600" >
+
+
+
+
+
+		<hr>
+		<a href ="index.html">Pagina Incial</a>
+
+		
+
+
+	</body>
+
+</html>

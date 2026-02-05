@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Despesa Sem Orçamento</title>
+</head>
+<body>
+
+	<h1>Despesas sem Orçamento</h1>
+	Com o objetivo de atender aos §§ 1º e 2º do Decreto de Encerramento nº 35.067, de 07 de novembro de 2025:
+	<p>Art. 6º É vedada a realização de despesa sem prévio empenho, conforme disposto no art. 60 da Lei Federal nº 4.320, de 1964.
+</p>
+<p>A§ 1º A despesa pública deverá ser reconhecida pelo regime de competência, independentemente de dotação orçamentária para o empenhamento, resguardada a apuração de responsabilidade de quem deu causa à despesa sem o prévio empenho.
+</p>
+<p>§ 2º As unidades gestoras solicitarão à Contabilidade-Geral do Estado – CONTAG as orientações necessárias para o reconhecimento da despesa por competência.
+</p>
+<p>Considerando a Dica de Execução Orçamentária nº 01, que trata sobre o uso dos elementos 92 (DEA), 93 (Restituições e Indenizações) ou do próprio elemento da despesa (ex.: 11, 36, 39 etc.), solicitamos que os órgãos e unidades gestoras sigam o passo a passo a seguir:
+</p>
+<ol>
+	<li>Verificar junto à CPO/Seplan se há dotação orçamentária disponível para empenhar a despesa (folha, custeio etc.).</li>
+	<li>Após confirmação da CPO/Seplan de que não há orçamento disponível, mas que a unidade já possui folha de pagamento, guia ou nota fiscal, a UG deverá entrar em contato com a Contag/Sefaz para receber as orientações necessárias ao reconhecimento da despesa por competência.</li>
+
+	Atenção: A UG realizará o registro contábil no passivo, mediante NL – Nota de Lançamento, vinculada à natureza da despesa com o elemento de despesa correspondente ao objeto do gasto (Elemento de despesa próprio).
+
+
+
+	<li>Em 2026, após realizado o passo anterior, a unidade gestora deverá empenhar, liquidar e pagar a despesa na natureza com o elemento próprio do objeto do gasto, previamente informado pela contabilidade. Assim, ocorrerá a baixa do passivo inscrito no exercício de 2025.</li>
+	Atenção: O objeto do gasto dessa despesa não é considerado DEA – Despesa de Exercícios Anteriores.
+
+	<li> Passo 4: No ano de 2026, somente deverá ser realizado empenho em DEA (elemento 92) nas hipóteses do art. 37 da Lei nº 4.320/1964, ou seja, quando se tratar de:</li>
+	a) despesa decorrente de restos a pagar que tenham sido cancelados indevidamente (prescrição interrompida); ou </br>
+	b) despesa que possuía dotação orçamentária suficiente em 2025, mas não foi empenhada na época própria; ou</br>
+	c) despesa cujo fato gerador ocorreu em 2025, mas o reconhecimento ocorreu apenas em 2026.
+
+</ol>
+
+<h3>Eventos</h3>
+<ul>540819 - Folha com ativo</ul>
+<ul>540836 - Patronla IPERN</ul>
+<ul>540837 - Patronal INSS</ul>
+<ul>540838 - Patronal IPERN</ul>
+<ul>540806 - Reconhecimento com Fornecedor pelo regime de competência (sem orçamento)</ul>
+
+<h3>Cadastrar passivo prévio para DEA - Despesas que tinham orçamento</h3>
+
+<ol>
+	<li>Verificar qual ND vai ser empenhada</li>
+	<li>Ver na funcionalidade “Listar Receita/Despesa Orçamentaria na aba “despesa” qual se tem passivo prévio cadastrado “passivo permanente nacional”. Se não tiver cadastrado, procurar o passivo P do passivo F que já está cadastrado naquela ND, na funcionalidade “manter Receita/Despesa”.</li>
+	<li>Verificar o conta corrente da conta de passivo P, se tiver conta corrente, consultar no detalhar conta se já teve lançamento nessa conta, se não tiver tido, deixar sem conta corrente, através da funcionalidade “manter conta contábil pcasp”</li>
+	<li>Como é um passivo P que foi cadastrado na ND, ter que ir na funcionalidade “manter exceção empenho DIV”, selecionar a UG que vai fazer o empenho em DEA e verificar se aquela conta contábil (passivo P) está como exceção, se não tiver, incluir.</li>
+	<li>Após isso, verificar se tem algum evento que possa fazer a NL de reconhecimento daquele passivo, considerando a VPD e o Passivo P vinculados aquela ND que se vai empenhar.</li>
+	<li>Se não tiver evento criado, criar um evento.</li>
+	<li>Depois associar evento transação.</li>
+</ol>
+<h3>Lista de Eventos já criados</h3>
+<ul>
+	<li><strong>540841</strong> - Reconhecimento de Passivo - Outros Benefícios Assistenciais</li>
+		<ul>
+			<li>ND: 33909808  - Outros Benefícios Assistenciais do Servidor e do Militar </li>
+		</ul> <br>
+	<li><strong>540842</strong> - Reconhecimento de Passivo - Outros Serviços de Terceiros - Pessoa Jurídica
+		<ul>
+			<li>ND: 33909239 - Outros Serviços de Terceiros - Pessoa Jurídica</li>
+		</ul> <br>
+
+	</li>
+	<li><strong>540843</strong> - Reconhecimento de Passivo - Recursos Fiscais - DARF A EMITIR
+		<ul>
+			<li>ND: 33909247 - Obrigaçõe Tributárias e Contributivas</li>
+		</ul> <br>
+	</li>
+	<li><strong>540844</strong> - Reconhecimento de Passivo - Serviços de TI - Pessoa Jurídica</li>
+		<ul>
+			<li>ND: 33909240 - Serviços de TI - Pessoa Jurídica (DEA)</li>
+		</ul> <br>
+	<li><strong>540839</strong> - Salários, Vencimentos e Remunerações - inscrição de Passivo (P) para execução como DEA.</li>
+		<ul>
+			<li>ND: 31909211  - Vencimento e Vantagens Fixas - Pessoal Civil</li>
+			<li>ND: 31909216  -  Outras Despesas Variáveis - Pessoal Civil</li>
+			<li>ND: 31909220  -  Décimo Terceiro do Exercício anterior - Servidor Civil</li>
+		</ul> <br>
+	<li><strong>540334</strong> - Incorporação de 1/3 de férias - Civil - RPPS</li><br>
+	<li><strong>540335</strong> - Incorporação de 1/3 de férias - Civil - RGPS</li><br>
+	<li><strong>540336</strong> - Incorporação de 1/3 de férias - Militar
+		<ul>
+			<li>ND: 33909221 -  Férias de exercício anterior - Servidor Civil</li>
+		</ul><br>
+
+
+	</li>
+	<li><strong>540845</strong> - 	Outros Auxílios Financeiros a Pessoa Física - inscrição de Passivo (P) execução como DEA.
+		<ul>
+			<li>ND: 33909248 - Outros Auxílios Financeiros a Pessoas Físicas</li>
+		</ul><br>
+
+	</li>
+	<li><strong>540847</strong> - Reconhecimento de Passivo - Material de Consumo - BAIXA CONCOMITANTE (CONSUMO IMEDIATO)</li><br>
+	<li><strong>540800</strong> - 	13º Salário - SEM ORÇAMENTO - Pessoal CIVIL ATIVO
+		<ul>
+			<li>ND: 31110122 - 13º Salário - Pessoal Civil RPPS</li>
+			<li>ND: 31110122 - 13º Salário - Pessoal Civil RGPS</li>
+			<li>ND: 311210413 - 13º Contratação por Tempo Determinado - Pessoal Civil</li>
+		</ul><br>
+
+	</li>
+	<li><strong>540830</strong> - 	13º Salário - SEM ORÇAMENTO - Pessoal MILITAR
+		<ul>
+			<li>ND: 311310115 - Adicional Natalino - 13º Salário Pessoal Militar Ativo</li>
+			<li>ND: 321310101 - Reserva por Tempo de Serviço - 13º Salário Pessoal Militar da Reserva Remunerada </li>
+			<li>ND: 321410101 - Pessoal da Reforma por Tempo de Serviço - 13º Salário Pessoal Militar Reforma </li>
+			<li>ND: 321410102 - Pessoal da Reforma por Invalidez - 13º Salário Pessoal Militar Reforma </li>
+			<li>ND: 322310100 - Proventos de Pensões - 13º Salário do Pessoal Militar das Pensões </li>
+		</ul>
+	</li>
+<hr>
+		<a href="index.html"> Página Inicial </a>
+
+</body>
+</html>
