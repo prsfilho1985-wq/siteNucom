@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conciliação Bancária</h1>
+
+    <div>
+        <ol>
+            <li>Guia de Recebimento</li>
+            <ul>
+                <li>Receita corrente (ex: 800086 - fonte UG ou 800102 - fonte tesouro) ou Receita de Capital (ex: 800094).</li>
+                <li>As receitas Intra-orçamentárias podem ser lançadas por GR (eventos 800113 ou 800098 se teve um registro prévio de crédito a receber) ou  de forma automática por meio das funcionalidades: Manter créditos a receber automático e Associar Despesa Receita Executada IPERN (esta última apenas para o IPERN).</li>
+                <li>Receita extraorçamtária: Receita na Fonte 9.869 e nos seguintes casos:
+                    <ol>
+                        <li> Recursos cujo ingresso não seja identificado pelo órgão será no evento 800000 (Registro de Rendas a Classificar);</li>
+                        <li> Recursos que pertençam a terceiros será no evento 800820 (Valores em Trânsito – Depósito Para Quem de Direito), pois será devolvido em breve usando o evento 700820 (PP extra com controle credor).</li>
+                    </ol> 
+                <li>Receita orçamentária na CAF (800102), fonte tesouro. Por ex: aplica-se nos casos de devolução de valores que foram repassados pela CAF em fontes tesouro.</li>
+                <li>Estorno do empenho pago: Se a devolução dos valores for referente a uma despesa do ano corrente, ou seja, se o empenho for do mesmo ano da devolução, o recomendado é fazer estorno do empenho pago: 
+                    <ol>
+                        <li>Fazer GR no evento 800001</li>
+                        <li>Se a devolução for para conta única, vai precisar fazer a GR na conta arrecadação da UG e a centralização manual, por meio dos eventos 580201/580202. </li>
+                        <li>Estornar nota empenho pago</li>
+                    </ol> 
+                <li>Associar fonte a natureza de receita:</li>
+                              <ul>
+                        <li>Cada Natureza de Receita será associada a apenas uma fonte de Recurso. Antes de associar uma natureza de receita é importante verificar a legalidade dessa ação conforme as normas de contabilidade presentes no MCASP e no ementário da receita. </li>
+                        <li>Para facilitar no momento do atendimento, recomenta-se utilizar a funcionalidade LISTAR RECEITA FONTE RECURSO para verificar as naturezas de receita que já estão associadas a fonte de recurso desejada, na maioria dos casos já existe uma natureza que vai atender ao caso concreto da UG. Se após está consulta for verificado que não existe uma natureza de receita associada a fonte desejada, utiliza-se a funcionalidade ASSOCIAR RECEITA FONTE EXECUÇÃO:
+</li>
+                        <lI>OBS: Toda NR criada já pode ser associada a uma fonte de recurso.</lI>
+                    </ul>                         
+            
+            </ul>
+            <li>Nota Lançamento - Aplicação/Resgate/Rendimento</li>
+                <ul>
+                    <li>A funcionalidade apresenta apenas os eventos evolvidos nestas ações. Dessa forma, a conta contábil utilizada para o domicílio bancário é quem vai determinar o evento de aplicação, resgate ou rendimento. Ou seja, primeiro é necessário consultar o detalhar conta da UG e verificar qual a conta contábil adequada, após isso, buscar em Listar evento, para procurar o evento e avaliar se o roteiro se enquadra no que se deseja registrar, conforme a conta contábil.
+</li>
+            <li>Obs: Na funcionalidade NOTA LANÇAMENTO vai gerar um ERRO, pois os eventos de APLICAÇÃO/RESGATE/RENDIMENTO estão associados para serem usados com NOTA LANÇAMENTO APLICAÇÃO/ RESGATE/ RENDIMENTO</li>
+                </ul>
+        </ol>
+
+
+    </div>
+   
+</body>
+</html>
