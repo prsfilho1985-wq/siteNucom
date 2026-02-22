@@ -9,38 +9,22 @@
 		<div id="topo">
 			<img src="imagens/nucom.png" width = 100>
 		</div>
-		<h1 class="texto">Orçamento e Contabilidade Pública na Prática</h1>
-		<h2>PP Devolvida</h2> 
-		<p>A sigla PP devolvida refere-se a uma Preparação de Pagamento devolvida, ou seja, um pagamento que foi rejeitado ou não processado pelo banco e retornou para a unidade gestora.</p>
-		A “PP devolvida” ocorre quando a ordem bancária (OB) ou o pagamento referente a uma despesa é rejeitado pelo sistema bancário — por exemplo, por dados incorretos do favorecido, conta encerrada, CNPJ divergente, erro de domicílio bancário ou ausência de saldo disponível — e o valor retorna ao órgão de origem.</p>
-		<p>Quando ocorre a devolução de pagamento, pode ocorrer três situações por parte das UGs:</p>
-		<ol>
-			<li>O empenho é do exercício atual e será pago novamente.</li>
-			<li>O empenho é do exercício atual e não será mais pago</li>
-			<li>O empenho é do exercício anterior e não será mais pago</li>
-		</ol>
+		<h1 class="texto">Pagamento devolvido (PP devolvida/ GR devolução banco)</h1>
+		PP DEVOLUÇÃO BANCO: Quando o Banco devolve um pagamento por causa de alguma informação incorreta (ex: domicílio bancário do credor), o dinheiro volta para a conta bancária de origem e este retorno é registrado através de uma Guia de Recebimento – GR (sempre na fonte 9.869 – extraorçamentária). Orçamentariamente o pagamento já ficou concluído.
+		<p>A UG pode consultar a GR e o motivo da devolução na funcionalidade IMPRIMIR PAGAMENTOS DEVOLVIDOS. A funcionalidade PP DEVOLUÇÃO BANCO é utilizada para reenviar ao banco essa despesa cujo pagamento foi rejeitado, e para isso a UG deverá informar a Guia de Recebimento (GR) de devolução e alterar os dados incorretos. A funcionalidade PP DEVOLUÇÃO BANCO apresenta todas as GR que foram devolvidas e ainda não foram reapresentadas.
+</p>
+		<p>Em caso de CNPJ incorreto, a depender do caso e documentação, pode ser autorizado o procurador/pp cessionário para PPs despesa empenhada pelo cadastro da ND ou se o empenho for do ano, usar a GR para fazer estorno do empenho pago. </p>
+		<p>Mas para casos de retenção (PP outras retenções), só é possível corrigir por demanda e ajuste contábil do cnpj ou cpf do credor (eventos 580440 e 580441), conforme modelo abaixo:
+</p>
+		<p>Obs: procurador/cessionário também é utilizado para pps sem devolução banco para casos de pagamento para credores diversos do empenho como tarifas bancárias que são depositadas na própria conta da UG ou imobiliária que recebe aluguel pelo proprietário do imóvel.
+</p>
+		<p>Para os casos nos quais a UG não for mais reenviar o pagamento (por exemplo: pagou por outro empenho) e o empenho for de anos anteriores (empenho do ano atual deve ser feito estorno do empenho pago, se for pp despesa empenhada), o procedimento é transformar a despesa de anos anteriores em receita. Os eventos para realizar esse procedimento vão depender da fonte e domicílio bancário do retorno:
+</p>
 
-		<div>
-		<h4>Situação 01: Empenho Pago Novamente </h4>
-		<p>A Unidade Gestora deverá utilizar a funcionalidade<strong>PP Devolução Banco </strong> e realizar o pagamento novamente.</p>
-		</div>
-		<hr>
+<p>OBS: são 4 ventos para contas arrecadação e 3 para domicílios próprios.</p>
 		
-		<div>
-		<h4>Situação 02: O Empenho é do ano e não será mais pago </h4>
-		<p>A Unidade Gestora deverá estornar a nota empenhho paga funcionalidade <strong>Estornar Nota Empenho Paga</strong></p>
-		</div>
-		<hr>
+
 		
-		<div>
-		<h4>Situação 03: O Empenho é de exercício anterior e não será mais pago</h4>
-		<p>Nesse caso, a pp devolvida deve ser baixada.</p>
-		</div>
-		<hr>
-
-
-		<p> Para baixar uma pp devolvida de ano anterior, utiliza-se a funcionalidade <strong>Nota Lançamento </strong>e os eventos dependerá de qual fonte de recursos foi utilizada e qual o domicílio bancário. </p>
-
 		<div>
 		<h4>Exemplo 1: Fonte 0500 e Domicílio Báncário 1006</h4>
 		Eventos: 
@@ -65,7 +49,7 @@
 			<li>540426 - Conversão de Passivos na CTU em Receita UG</li>
 			<li>540431 – Baixa a GR devolvida (controle)</li>
 			<li>540430 – Converte a pp devolvida em receita do Tesouro</li>
-			<li>600912 – Volta da disponibilidade para o Tesouro</li>
+			<li>600751 – Volta da disponibilidade para o Tesouro</li>
 		</ul>
 			<img src="imagens/baixa_gr_pp_devolvida_f501_10006.png" width="600">
 		</div>
@@ -95,7 +79,16 @@
 		</ul>
 			<img src="imagens/baixa_gr_pp_devolvida_renainf.png" width="600">
 		</div>
-		
+
+		<p>Obs: pedir para UG fundamentar bem no histórico o motivo por que não pagou a pp devolvida.
+</p>
+		<p>REGULARIZAÇÃO DE PP DEVOLVIDA COM FAVORECIDO “UG/GESTÃO” SITUAÇÃO: a UG fez transferência financeira, repasse financeiro ou descentralização financeira, informando no campo Favorecido da PP uma UG/Gestão (e não um CNPJ), e essa Ordem Bancária foi devolvida pelo Banco do Brasil por alguma inconsistência ou falta de saldo em conta. </p>
+		<p>SOLUÇÃO: como não é possível fazer PP DEVOLUÇÃO BANCO informando uma UG/Gestão como favorecido, a UG deverá utilizar a funcionalidade Cancelar Pagamento Devolvido UG para devolver esse pagamento.
+</p>
+		<p>Ou seja, CANCELAR GR QUANDO FOR TRANFERÊNCIAS DE UG PARA UG DEVOLVIDA PELO BANCO.</p>
+		<p>Pagamento cujo valor foi contabilizada na UG do favorecido e não recebeu efetivamente no banco.</p>
+		<p>Funcionalidade: Cancelar Pagamento Devolvido UG</p>
+
 
 		<hr>
 		<a href ="index.html">Pagina Incial</a>

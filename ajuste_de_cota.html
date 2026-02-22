@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Nota Empenho</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">	
+	
+
+	</head>
+	<body class="fundo">
+		<div id="topo">
+			<img src="imagens/nucom.png" width = 100>
+			<h1>Núcleo de Consultoria e Monitoramento</h1>
+		</div>
+
+
+		<h2>Ajuste de Cotas</h2> 
+        As contas de cotas precisam estar com os saldos alinhados com os saldos das contas de disponibilidade financeira, mas quando não acontece a devolução do saldo descentralizado no ano anterior, pode causar uma diferença entre o saldo de cota e o saldo financeiro. Neste caso, é necessário verificar em qual conta de cota o saldo está para proceder com o ajuste necessário. 
+        <p>Atenção: consultar no Listar Documento contábil para verificar se tem algum caso semelhante e analisar o espelho contábil.</p>
+        <p>Temos várias contas de cotas as quais dependem das fontes e de quem envia para saber em qual conta contábil se encontra o saldo a enviar e a receber.</p>
+        <h3>Exemplo:</h3>
+        a fonte controlada do tesouro 0.500/720 faz repasse financeiro para UGs sem DC/NC conta de cota é a 8.2.2.2.2.01.01 na UG após a liquidação e após solicitado pela unidade fica a autorizar na CAF conta 8.2.2.1.2.01.02. Feita o repasse na caf o saldo fica bloqueado nas contas final 02 e 03 até o recebimento a qual fica com saldo na conta 8.2.2.2.2.04 (recebida acumulada) e final 05 a utilizar. Esse saldo a utilizar deve bater com a disponibilidade da UG 8217201.
+        <p>É importante saber que a cota financeira deve estar casada com a disponibilidade. O valor da 8.2.1.7.1.03 na fonte deve estar igual ao saldo da cota de cota a utilizar, a qual poderá ser final 05 ou 04 a depender da fonte de recurso e conta. Muitas UG não devolvem os saldos descentralizados de outras unidades gestoras, assim é necessário que ocorram ajustes de cota do a solicitar para a utilizar na UG que envia o recurso.
+</p>
+        <p>Primeiramente, a UG descentralizadora envia o orçamento, aí então, a UG recebedora do recurso, empenha e após a liquidação da despesa fica com o saldo de cota financeira a solicitar para que possam fazer o pagamento a banco, PP e OB. Algumas unidades não precisam solicitar a exemplo da PM e Bombeiros para o Fuprom, o saldo vai direto para o A autorizar.</p>
+        <p>Assim temos no saldo a solicitar os valores de restos a pagar, retenções e consignações a pagar do grupo 001 e as liquidações de despesa do ano - saldo credor no grupo 005 folha.
+</p>
+
+        <h3>COTA PARA CANCELAMENTO DE RESTOS A PAGAR</h3>
+        Para cancelar os restos a pagar a UG tem que ter saldo de cota a solicitar. O ideal é que ela não peça o repasse do que vai cancelar ou devolva o saldo que já solicitou. Podemos fazer o ajuste de cota para possibilitar o cancelamento de Restos a Pagar: Evento 540038 – Mesmo grupo: mudando a conta 01 para 04. Mas o ideal é estornar depois para não descasar o saldo das cotas a utilizar com a disponibilidade assim que houver liquidação.
+        <p>Para UGS que não devolvem o saldo de descentralização (importante destaca que o manual determina a devolução) e ficam com valores em banco e Sigef é necessário ajuste de cotas para que eles não solicitem novamente recurso a UG descentralizadora do que já tem em conta. o limite desse ajuste deve ser o valor liquidado e retido a pagar além do saldo que estiver no banco da UG. Os eventos dependem da conta de cota e fonte de recurso.
+</p>
+        <h3>COTA DE SUBREPASSE UG COM DISPONIBILIDADE DA FONTE TESOURO</h3>
+        Cota de Subrepasse quando já possui a disponibilidade na UG – Evento 580426 – Para fontes do Tesouro – Hospitais FR 0.500 ou outra fonte tesouro (.07) (NC). 8.2.2.2.2.07.04
+        <h3>COTA DE SUBREPASSE UG COM DISPONIBILIDADE E RECURSOS PRÓPRIOS</h3>
+        Cota de Subrepasse quando a UG já possui a disponibilidade – Evento 580427 – para recursos próprios (Ex: utilizado para os poderes e caso de descentralização de orçamento para outra UG/ para casos de provisão e destaque) – Indiretas, detran (.04) (DC) 8.2.2.2.04.04
+        <h3>COTA DE REPASSE FINANCEIRO UG COM DISPONIBILIDADE</h3>
+        Cota de Repasse financeiro quando a UG já possui a disponibilidade – Evento 580428 – para recursos próprios (Ex: nos casos dos hospitais da 240131/24131 para o hospital, poderes) (.05) (NC). 8.2.2.2.05.04
+
+
+
+
+		
+		<hr>
+		<a href="index.html"> Página Inicial </a>
+	
+			
+		</ul>
+	</body>
+
+</html>
