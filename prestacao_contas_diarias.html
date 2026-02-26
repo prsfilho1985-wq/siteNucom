@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rotinas</title>
+    </head>
+    <body>
+        <h1>Prestação de contas de diárias </h1>
+        As prestações de contas são realizadas na funcionalidade Realizar Prestação de Contas, usando o documento contábil PC para cada diária e em 3 etapas: Entregue, Análise e Baixa Regular. Para consultar a PC:  Listar Prestação de Contas – Geral.
+        <p>Em alguns casos aconteceram a baixa do ativo e das contas de controle (1113110105 e 8912102) sem baixar o documento contábil. Nesses casos é necessário realizar a conciliação entre o documento PC do CPF e o saldo na conta de controle e do ativo, se:
+</p>
+    <ol>
+        <li> Se a PC antiga ainda existir é necessário abrir demanda para excluir o documento contábil, após confirmar a baixa do saldo que ocorreu anteriormente. </li>
+        <li>Se a PC antiga tiver sido baixada com o saldo de uma PC cadastrada posteriormente vai faltar saldo para baixar esta que está em aberto.  Dessa forma, é necessário baixar o saldo restante (se tiver) por meio dos eventos 540254 e 540253 (nessa ordem). Após isso, abrir a demanda para baixar o documento PC, conforme tela abaixo:
+</li>
+        Atenção: não baixar os saldos contábeis, sem baixar o documento contábil.
+
+        Atenção: Em caso de DEA de diárias, não é necessária ter o registro no ativo para prestação de contas, visto que o fato gerador já aconteceu. 
+
+
+    </ol>
+    </body>
+</html>

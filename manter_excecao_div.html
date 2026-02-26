@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rotinas</title>
+    </head>
+    <body>
+        <h1>Parcelamento de dívida: Manter exceção empenho DIV/ precatório</h1>
+        Os parcelamentos de dívidas de longo prazo da administração direta são controlados pela CCRD, mas os parcelamentos de dívida da administração indireta são controlados pela própria UG. Nesse caso, no momento do empenho, vai exigir o contrato DIV. Diante disso, será necessário cadastrar a conta contábil que aparece no passivo da ND do empenho na funcionalidade: Manter exceção empenho DIV. Ex: ND 33.90.92.56 o passivo é 2.1.1.4.3.01.02.01, o cadastro foi realizado conforme tela abaixo:
+
+       <h3>Estava tentando emitir um empenho para despesa de precatórios, contudo deu um erro no SIGEF, pois foi exigido o preenchimento do campo "Contrato DIV"
+</h3>
+    <p>Deve-se cadastrar a conta contábil do passivo em “Manter Exceção Empenho DIV”</p>
+
+    <h3>Transferir o Passivo da Dívida para a UG. </h3>
+    <ol>
+        <li>Verificar na ND da dívida qual o passivo financeiro. Verificar se há saldo na UG: 220102 a ser transferido para a UG no qual vai ser pago o empenho.</li>
+        <li>Eventos 540694 UG: 220102 (Dívida) e 540695 na UG para onde vai o passivo. </li>
+        Obs. A NL deve ser feito na Dívida
+
+        <hr>
+
+        <a href="index.html">Página inicial</a>
+
+    </body>
+</html>
