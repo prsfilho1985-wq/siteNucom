@@ -1,18 +1,45 @@
 <!doctype html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Nota Empenho</title>
-		<link rel="stylesheet" type="text/css" href="estilo.css">	
+	
 	
 
 	</head>
-	<body class="fundo">
-		<div id="topo">
-			<img src="imagens/nucom.png" width = 100>
-			<h1>Núcleo de Consultoria e Monitoramento</h1>
-		</div>
+	<body>
+		<h1>Baixa de Retenções</h1>
+		Quando a UG pagou a retenção por outro empenho ou fez uma retenção errada é possível dar baixa no saldo do passivo e controle das retenções.
 
-		<h3>Baixa de Retenções</h3>
+		<h3>BAIXAR RETENÇÕES POR CONTROLE DE RT – DESDE 2018 ATÉ AGORA</h3>
+
+		<ol>
+			<li> Identificar o passivo de RT no ano que ocorreu a RT e a NE.</li>
+			<li> Fazer a nota de lançamento usando os eventos 580496 (RT) e 580497 (NE). </li>
+		</ol>
+
+		<h3>PARA BAIXAR RETENÇÃO SEM CONTROLE DE RT – ANTES DE 2018 (SIAF)</h3>
+
+		Realizar uma Nota lançamento nos eventos 580500 (se o Passivo for CNPJ + FR) ou 580501 (se o Passivo for só por FR – mas para encontrar o CNPJ precisa consultar a conta de controle 89823.01 para preencher no campo do favorecido no momento da NL).
+
+		<h3>EM CASO DE PAGAMENTO DE SALDO SIAF (QUE NÃO TEM RT E NÃO TEM GR DEVOLUÇÃO)</h3>
+		Para pagar saldo SIAF é necessário verificar o saldo em janeiro de 2018 na conta 89823.01 e no favorecido correspondente. Após isso fazer PP Extra com Controle de Credor no evento 700126 e OB. O evento não aparece em tela pois é de máquina.
+
+		<h3>BAIXA DE RETENÇÃO PARA PASSIVO COM FINAL .01 E .02</h3>
+		Para os casos de Baixa de Retenção para passivo com final .01 e .02 (SIGEF) que não possui controle por RT (8.9.8.1.2.01/.02), nem controle por NE (8.9.8.1.4.01). Possui somente controle de credor (8.9.8.2.3.01) = usar o evento 580503. 
+		<p>OBS: Atenção para a conta de VPA/Desincorporação, pois a 4.9.9.9.1.99.03 são para os casos de baixas de retenções SIGEF e vão influenciar no BF E DFC, ou seja, as contas com final .01 e .02. Já a conta de VPA 4.9.9.9.1.21.00 são para as desincorporações de saldo SIAF (apenas saldos financeiros), apenas para a DFC.
+</p>
+
+		<h3>BAIXAR RETENÇÃO QUE TEM CONTROLE DE RT, MAS NÃO TEM SALDO NO PASSIVO</h3>
+
+		O passivo foi baixado anteriormente de forma errada (por PP extra com controle de credor), diante disso, os documentos de retenção ficaram no sigef, mas sem ter saldo no passivo 2.1.8.8.X. Utilizar os eventos 580494 e 580497.
+
+
+		<hr>
+
+		<a href="index.html"> Página Inicial</a>
+
+
 
 
     </body>

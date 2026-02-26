@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rotinas</title>
+    </head>
+    <body>
+        <h1>Retenções</h1>
+        A maioria das retenções acontecem no momento da liquidação, apenas a retenção de IRRF que acontece na Preparação de pagamento – PP, pois nesse caso é necessário seguir o regime de caixa com registro na saída de recursos, para o pagamento à Receita Federal (mas o empenho, certificação e liquidação do IR é conforme a NF, ou seja, pelo valor Bruto). 
+        Essa retenção pode seguir dois processos diferentes a depender do domicílio bancário cadastrado: Quando o Domicílio Bancário da retenção for o mesmo domicílio da Conta Única: Essas retenções são automaticamente concluídas, pois são enviadas para pagamento na CAF e ficam com o “status” de cancelada na funcionalidade Listar Retenção Realizada. E quando o Domicílio Bancário da retenção for diferente do domicílio bancário da CAF: será necessário fazer a Preparação para Pagamento – PP do IRRF na funcionalidade “PP IRRF” e enviar a banco. 
+        <p>É imprescindível fazer o controle contínuo das retenções registradas nas NLs para concluir o processo. Esse controle pode ser realizado de várias formas através do sistema, mas, principalmente, pela funcionalidade: Listar Retenção Realizada. Ou no Detalhar Conta da UG nas contas 2.1.8.8.X.XX.XX ou nas contas de controle de retenção (consultar balancete Unidade Gestora).
+</p>
+        <p>Filtro – Situação: É possível verificar as retenções canceladas (para os casos de retenção de IRRF que possuem o mesmo domicílio bancário da conta única), sem PP, com PP, com OB, PP rejeitada, paga e transferida tesouro (status utilizado pela CAF).    
+</p>
+        <p>Filtro – Favorecido: Mostra a retenção a partir do CNPJ do INSS, por exemplo, ou do CPF, inscrição genérica ou nome.
+</p>
+        <p>Filtro – Tipo Retenção: Este filtro é o mais utilizado para as retenções da folha, pois permite filtrar pelo tipo de RT, ou seja, pelo mesmo código da rubrica que vem no relatório da folha e que foi cadastrado no SIGEF/RN.  Na coluna código está apenas a sequência numérica gerada pelo SIGEF/RN. É na coluna Nome Abreviado que irá conter todas as informações da folha, o código da rubrica e o nome conforme relatório mensal da folha elaborado pela SEARH/RN.
+</p>
+        <p>Exceção: As faltas dos servidores não devem ser cadastradas como retenção. Para essa situação, a liquidação precisa ser realizada pelo valor líquido, desconsiderando o valor referente a falta do servidor. Ou seja, no momento de realizar a Nota de Lançamento, é necessário subtrair o valor da falta e liquidar a despesa com o valor devido.</p>
+
+        <hr>
+
+        <a href="index.html"> Página Inicial</a>
+    
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Preparação de Pagamento</title>
+    </head>
+    <body>
+        <h1>Preparação de Pagamento e Ordem Bancária</h1>
+
+        É o documento gerado no SIGEF para individualizar cada pagamento, informando quem receberá o recurso (Favorecido) e a forma como será feito esse pagamento (Tipo de Serviço). É necessário confeccionar a Preparação de Pagamento (PP) antes da emissão da Ordem Bancária (OB). Cada OB poderá conter no máximo 30 Preparações de Pagamento. Caminho: SIGEF / Execução Financeira. Na PP consta a informação da UG/conta de destino e nos dá a informação de retorno do banco.
+        <p>PP DESPESA EMPENHADA: utilizada para realizar o pagamento ao credor da Nota de Empenho (NE), e é confeccionada de acordo com os dados alimentados pela Nota de Lançamento (NL) que liquidou a despesa. É a PP na qual é possível realizar o estorno do empenho.</p>
+        <p>PP EXTRAORÇAMENTÁRIA COM CONTROLE DE CREDOR: Esta PP é utilizada para pagar a terceiros os valores inscritos no passivo, como Depósitos de Diversas Origens (DDO), Cauções, Fianças, entre outros
+</p>
+        <p>PP EXTRA ORÇAMENTÁRIA SEM CONTROLE DE CREDOR: É utilizada para realizar transferências financeiras entre UGs (exceto descentralizações financeiras e repasses financeiros realizados por funcionalidades próprias), transferências banco a banco na mesma UG, restituições de receitas, entre outros. Uma característica dessa PP é que se for informado no campo “favorecido” o código da UG/Gestão (e não o CNPJ da UG), o SIGEF fará registro contábil automático também na UG/Gestão destino. Assim, numa transferência financeira entre UGs, o evento escolhido será lançado nas duas unidades, e a UG destino não precisa informar manualmente o registro de entrada.</p>
+        <p>Ordem Bancária: A ordem bancária é o documento de envio ao banco no qual apresentará a informação de retorno de processamento do envio. Uma OB pode conter diversas Preparações de Pagamento (PP), até o número máximo de 30. E pode ter diversos favorecidos ou credores. Para serem inseridas na mesma OB, todas essas PPs deverão:
+</p>
+
+        <ul>
+            <li>ter o mesmo tipo - centralizada, descentralizada ou débito conta </li>
+            <li>ter a mesma fonte de recursos</li>
+            <li>ser da mesma UG/Gestão</li>
+            <li>ser pagas pelo mesmo domicílio bancário de origem </li>
+        </ul>
+
+        <h3>Tipos de OBs</h3>
+
+        <ul>
+            <li>Centralizada – para os casos em que a CAF enviaria ob de forma centralizada (não usamos aqui no RN)</li>
+            <li>Descentralizada – quando a própria UG emite a OB para pagamento de despesas</li>
+            <li>Débito Conta – para regularização da despesa sem transmissão da OB, pois já o dinheiro já saiu do banco </li>
+            <li>Extraorçamentária – para transferências financeiras e pagamentos que não envolvam despesa / execução orçamentária (ex: transferência financeira entre contas bancárias da mesma UG, pagamento de caução, pagamento de DDO, dedução de receita)</li>
+ 
+        </ul>
+
+        <hr>
+		<a href ="index.html">Pagina Incial</a>
+		
+    </body>
+</html>

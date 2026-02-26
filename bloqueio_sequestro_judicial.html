@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <tite>Rotinas</tite>
+    </head>
+    <body>
+        <h1>Bloqueio Judicial e Sequestro Judicial</h1>
+
+        Bloqueio – como não tem saída de caixa, será necessário apenas um lançamento nas contas de controle (8.2.1.7.2.01 e 8.2.1.7.2.03): NOTA DE LANÇAMENTO no SIGEF - Evento 540504.
+        <p>Em caso de desbloqueio do valor, o financeiro realizará o mesmo procedimento marcando estorno, mantendo as mesmas informações do evento de bloqueio. (evento 540504 E).</p>
+        <ol>
+            <li> Se for conta arrecadação, usar os eventos 540502, 540505, 540504</li>
+            <li> Se não for conta arrecadação, usar o evento: 540504</li>
+        </ol>
+        <p>Sequestro - Com a efetiva transferência dos recursos para a conta bancária do juízo competente. Proceder com a execução correta:
+</p>
+        <ul>
+            <li>Se os recursos estiverem bloqueados proceder com o desbloqueio.
+</li>
+            <li>Realizar registro por meio de PP extra sem controle credor e em seguida OB de regularização. Que fará a redução de saldo contábil e constituição de Ativo de Valores Apreendidos por Decisão Judicial. (Evento 700061).
+</li>
+        </ul>
+
+        <p>Regularização de sequestro – Para efetuar a regularização é necessário identificar:</p>
+        <ol>
+            <li>Qual órgão era responsável pela obrigação do valor que foi sequestrado.
+</li>
+            <li>O tipo da conta corrente e a fonte de recurso.</li>
+            <li>Natureza do processo judicial (pessoal, serviços...)</li>
+            <li>Sujeito requerente da ação ou direito reclamado.</li>
+
+        </ol>
+
+    </body>
+</html>
