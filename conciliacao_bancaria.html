@@ -6,54 +6,80 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Conciliação Bancária</h1>
+		<div>
+            <h3>Receitas Orçamentárias</h3>
 
-    A conciliação bancária é o processo de conferência e comparação entre o extrato da conta bancária e os registros de controle financeiro internos em um sistema como o SIGEF/RN.
-    <p>O objetivo principal é garantir que o saldo que o banco diz ter seja exatamente o mesmo saldo que o seu controle deverá ter.</p>
-    <p>Pilares da conciliação bancária:</p>
-    <ol>
-        <li>Confronto de dados</li>
             <ul>
-                <li>Comparar o Extrato com o razao contábil</li>
-            </ul>
-        <li>Identificação das divergências</li>
-            <ul>
-                <li>Divergencias mais comuns:</li>
-                <ul>
-                    <li>Tarifas Bancárias</li>
-                    <li>Depósitos não identificados</li>
-                </ul>
-            </ol>
-    </ul>
-    <div>
-        <ol>
+                <li>Receitas correntes</li>
+                    <ul>
+                        <li>Evento: 800086 - Fonte UG</li>
+                        <li>Evento: 800102 - Fonte Tesouro</li>
+                            <ul>
+                                <li>Aplica-se por exemplo nos casos de devolução de valores que foram repassados pela CAF em fonte tesouro.</li>
+                            </ul>
+                    </ul>
 
+        </div>
 
-            <h1>Guia de Recebimento</h1><br>
-		1. Conceito
-		A Guia de Recebimento (GR) é o documento de arrecadação interna utilizado para registrar a entrada de recursos nas contas do Tesouro ou das unidades gestoras não provenientes do sistema bancário automático, ou seja, 		ingressos manuais ou específicos.
-		<h3>No contexto da contabilidade pública, a GR:</h3>
-		<ul>
-			<li>Formaliza o registro contábil da receita orçamentária ou extraorçamentária;</li>
-			<li>Identifica a origem do recurso, a classificação da receita (natureza, fonte/destinação e UG arrecadadora);</li>
-			<li>É utilizada tanto para receitas próprias diretamente arrecadadas quanto para devoluções e estornos de despesas.</li>
-		</ul>
-            <li>Guia de Recebimento</li>
+        <div>
+                <li>Receitas de Capital</li>
+                    <ul>
+                        <li>Evento:800094</li>
+                    </ul>
+                <li>Receitas Intra-orçamentárias podem ser lançadas por:
+                    <ul>
+                        <li>Guia de Recebimento (GR)</li>
+                            <ul>
+                                <li>Evento: 800113</li>
+                                <li>Evento: 800098 - quando há um registro prévio de crédito a receber</li>
+                            </ul>
+                        <li>De forma automática por meio das funcionalidades:</li>
+                           <ul>
+                                <li>Manter Créditos a Receber Automáticos</li>
+                                <li>Associar Despesa Receita Executada IPERN (Apenas IPERN)</li>
+                            </ul>
+            </ul> 
+        </div>
+
+        <div>
+
+            <h3>Receitas Extraorçamentárias</h3>
+
             <ul>
-                <li>Receita corrente (ex: 800086 - fonte UG ou 800102 - fonte tesouro) ou Receita de Capital (ex: 800094).</li>
-                <li>As receitas Intra-orçamentárias podem ser lançadas por GR (eventos 800113 ou 800098 se teve um registro prévio de crédito a receber) ou  de forma automática por meio das funcionalidades: Manter créditos a receber automático e Associar Despesa Receita Executada IPERN (esta última apenas para o IPERN).</li>
-                <li>Receita extraorçamtária: Receita na Fonte 9.869 e nos seguintes casos:
-                    <ol>
-                        <li> Recursos cujo ingresso não seja identificado pelo órgão será no evento 800000 (Registro de Rendas a Classificar);</li>
+                <li>Receita extraorçamentária fonte 9.869, casos:
+                    <ul>
+                        <li> Recursos cujo ingresso não seja identificado pelo órgão
+                            <ul>
+                                <li>Evento: 800000 - Registro de Rendas a Classificar</li>
+                            </ul>
                         <li> Recursos que pertençam a terceiros será no evento 800820 (Valores em Trânsito – Depósito Para Quem de Direito), pois será devolvido em breve usando o evento 700820 (PP extra com controle credor).</li>
-                    </ol> 
-                <li>Receita orçamentária na CAF (800102), fonte tesouro. Por ex: aplica-se nos casos de devolução de valores que foram repassados pela CAF em fontes tesouro.</li>
+                            <ul>
+                                <li>Evento: 800820 - Valores em Trânsito - Depósito Para Quem de Direito F. 9.869</li>
+                                    <ul>
+                                        <li>Funcionalidade: Guia Recebimento </li>
+                                    </ul>
+                                <li>Evento: 700820 - Pagamento Valores em Trânsito - Depósito Para Quem de Direito</li>
+                                    <ul>
+                                        <li>Funcionalidade: PP Extra Orçam. COM Controle Credor</li>
+                                    </ul>
+                            </ul>
+            </ul> 
+        
+        </div>
+
+        <div>
+               
+             <h3>Estornar Nota Empenho Paga</h3>
+             
+            <ul>
                 <li>Estorno do empenho pago: Se a devolução dos valores for referente a uma despesa do ano corrente, ou seja, se o empenho for do mesmo ano da devolução, o recomendado é fazer estorno do empenho pago: 
                     <ol>
                         <li>Fazer GR no evento 800001</li>
                         <li>Se a devolução for para conta única, vai precisar fazer a GR na conta arrecadação da UG e a centralização manual, por meio dos eventos 580201/580202. </li>
                         <li>Estornar nota empenho pago</li>
-                    </ol> 
+            </ul>
+
+        </div>
                 <li>Associar fonte a natureza de receita:</li>
                               <ul>
                         <li>Cada Natureza de Receita será associada a apenas uma fonte de Recurso. Antes de associar uma natureza de receita é importante verificar a legalidade dessa ação conforme as normas de contabilidade presentes no MCASP e no ementário da receita. </li>

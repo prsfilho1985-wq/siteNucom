@@ -1,9 +1,117 @@
-.caralho {
-background: blue;
-border: 1 px solid gray;
-width: 150px;
-height: 150px;
+<style type="text/css">
+        /* Reset e Fontes */
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
+        /* Cabeçalho */
+        .header-container {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px 5%;
+            border-bottom: 3px solid #004a8d;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-box {
+            margin-right: 25px;
+        }
+
+        .logo-box img {
+            display: block;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #004a8d;
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* Estrutura Principal */
+        .main-content {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h3 {
+            color: #d9534f;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        h4 {
+            background-color: #004a8d;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        /* Listas e Links */
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateX(5px);
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #d9534f;
+            text-decoration: underline;
+        }
+
+        /* Estilização para Links de PDF/Excel */
+        a[href$=".pdf"]::after {
+            content: " (PDF)";
+            font-size: 0.75rem;
+            color: #d9534f;
+        }
+
+        a[href$=".xlsx"]::after {
+            content: " (Excel)";
+            font-size: 0.75rem;
+            color: #28a745;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding-bottom: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
 
 
 
