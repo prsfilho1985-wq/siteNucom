@@ -1,10 +1,10 @@
-<style type="text/css">
+
         /* Reset e Fontes */
         * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
+            line-height: 1.5;
+            margin: 1.0;
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
@@ -35,6 +35,15 @@
             font-size: 1.8rem;
             letter-spacing: -0.5px;
         }
+  h2 {
+            background-color: #004a8d;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+
 
         /* Estrutura Principal */
         .main-content {
