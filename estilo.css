@@ -11,14 +11,19 @@
         }
 
         /* Cabeçalho */
-        .header-container {
-            display: flex;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 20px 5%;
-            border-bottom: 3px solid #004a8d;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+        .header-nucom {
+        display: flex;         /* Ativa o modo flexível */
+        align-items: center;   /* Alinha verticalmente ao centro */
+        gap: 20px;            /* Espaço entre a imagem e o texto */
+        font-family: Arial, sans-serif;
+        padding: 10px;
+    }
+
+    .header-nucom h1 {
+        margin: 0;             /* Remove margens padrão do H1 */
+        font-size: 24px;
+        color: #333;
+    }
 
         .logo-box {
             margin-right: 25px;
